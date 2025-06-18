@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Revolver Coffee - Premium Arabica coffee roastery in Bali. Started in Seminyak 2012, now spanning multiple venues across the beautiful island of Bali."
+    />
+    <meta
+      name="keywords"
+      content="revolver coffee, bali coffee, seminyak coffee, arabica beans, coffee roastery, specialty coffee"
+    />
+    <meta name="author" content="Revolver Coffee" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://revolvercoffee.com" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Revolver Coffee - Premium Coffee Roastery in Bali"
+    />
+    <meta
+      property="og:description"
+      content="Coffee is at the heart of who we are. Premium Arabica beans roasted to perfection in Bali since 2012."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://revolvercoffee.com" />
+    <meta
+      property="og:image"
+      content="https://revolvercoffee.com/images/revolver-hero.jpg"
+    />
+    <meta property="og:site_name" content="Revolver Coffee" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Revolver Coffee - Premium Coffee Roastery in Bali"
+    />
+    <meta
+      name="twitter:description"
+      content="Coffee is at the heart of who we are. Premium Arabica beans roasted to perfection in Bali since 2012."
+    />
+    <meta
+      name="twitter:image"
+      content="https://revolvercoffee.com/images/revolver-hero.jpg"
+    />
+
+    <title>Revolver Coffee - Premium Coffee Roastery in Bali | Est. 2012</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="#" as="font" type="font/woff2" crossorigin />
+
+    <style>
+      /* CSS Custom Properties */
+      :root {
+        --primary-black: #000000;
+        --primary-white: #ffffff;
+        --accent-red: #c41e3a;
+        --text-gray: #666666;
+        --font-primary: "Arial", sans-serif;
+        --font-secondary: "Georgia", serif;
+        --container-max: 1200px;
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 2rem;
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+        --heading-font-stack: "PP Editorial";
+        --heading-font-radio: "PP Radio Grotest";
+        --font-brand: "Revs";
+      }
+
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--heading-font-stack);
+        line-height: 1.6;
+        color: var(--primary-white);
+        background-color: var(--primary-black);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      /* Utility Classes */
+      .container {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 var(--spacing-sm);
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Header Styles */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--primary-black);
+        z-index: 1000;
+        padding: var(--spacing-sm) 0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 var(--spacing-sm);
+      }
+
+      .nav__logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .nav__menu {
+        display: flex;
+        list-style: none;
+        gap: var(--spacing-md);
+      }
+
+      .nav__link {
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav__link:hover {
+        color: var(--accent-red);
+      }
+
+      .nav__cart {
+        position: relative;
+      }
+
+      /* Hero Section */
+      /* .hero {
+        height: 100vh;
+        background: url("https://revolverbali.com/cdn/shop/files/web-landing_1728x.webp?v=1747734498")
+          center/cover;
+      } */
+
+      .hero__content {
+        max-width: 800px;
+        z-index: 2;
+      }
+
+      .hero__image {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .hero__title {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: normal;
+        font-family: var(--heading-font-stack);
+        font-weight: 400;
+        letter-spacing: 0;
+        margin-bottom: var(--spacing-md);
+        line-height: 1.2;
+        padding: 0 var(--spacing-xs);
+      }
+
+      .hero__subtitle {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        opacity: 0.9;
+      }
+
+      /* Press Section */
+      .press {
+        text-align: start;
+        border-bottom: 1px solid #333;
+      }
+
+      .press__title {
+        font-size: 3.8rem;
+        margin-left: var(--spacing-xs);
+      }
+
+      .press__logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-xl);
+        flex-wrap: wrap;
+        height: 256px;
+      }
+
+      .press__logo {
+        width: 265px;
+        height: 220px;
+        object-fit: contain;
+      }
+
+      .press__logo:hover {
+        opacity: 1;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        background: #b93741;
+        padding: var(--spacing-sm) var(--spacing-sm);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .newsletter__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-sm);
+      }
+
+      .newsletter__input {
+        flex: 1;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border: none;
+        border-bottom: 1px solid white;
+        background: transparent;
+        color: var(--primary-white);
+        outline: none;
+      }
+
+      .newsletter__button {
+        padding: var(--spacing-xs) 0;
+
+        color: var(--primary-white);
+        transition: border 0.3s ease;
+        background: transparent;
+        border-bottom: 1px solid white;
+        color: white;
+      }
+
+      .newsletter__button:hover {
+        background: transparent;
+        border-bottom: 1px solid transparent;
+        color: white;
+      }
+
+      /* About Section */
+      .about {
+        padding: var(--spacing-sm) 0;
+        text-align: center;
+      }
+
+      .about__title {
+        font-size: 32px;
+        margin-bottom: var(--spacing-sm);
+        font-weight: normal;
+      }
+
+      .about__content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 20px;
+        font-family: var(--heading-font-radio);
+      }
+
+      .about__signature {
+        margin-top: var(--spacing-md);
+        font-size: 20px;
+        font-family: var(--heading-font-radio);
+      }
+
+      /* Run Club Section */
+      .run-club {
+        padding: var(--spacing-xl) 0;
+        text-align: center;
+        height: 560px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://revolverbali.com/cdn/shop/files/REVS_RUN_CLUB_1512x.webp?v=1745466124")
+            center/cover;
+        display: flex;
+        align-items: center;
+      }
+
+      .run-club__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-top: auto;
+      }
+
+      .run-club__title {
+        font-size: 2rem;
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-md);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .run-club__button {
+        display: inline-block;
+        width: 50vw;
+        padding: var(--spacing-xs) var(--spacing-xl);
+        border: 2px solid var(--primary-white);
+        background-color: var(--primary-white);
+        color: var(--primary-black);
+        margin: var(--spacing-md) 0;
+        transition: all 0.3s ease;
+      }
+
+      .run-club__button:hover {
+        background: var(--primary-white);
+        color: var(--primary-black);
+      }
+
+      .run-club__offer {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-top: auto;
+      }
+
+      /* Venues Section */
+      .venues {
+      }
+
+      .venues__title {
+        font-size: 3.8rem;
+        margin-left: var(--spacing-xs);
+      }
+
+      .venues__grid {
+        margin: 0 var(--spacing-xs);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+        height: 450px;
+      }
+
+      .venues__list {
+        list-style: none;
+      }
+
+      .venues__item {
+        padding: var(--spacing-sm) 0;
+        font-size: 36px;
+        letter-spacing: 0;
+        border-bottom: 1px solid #333;
+      }
+
+      .venues__image {
+        overflow: hidden;
+        /* height: 350px; */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .venues__img {
+        height: 200px;
+        object-fit: cover;
+        flex: 1;
+      }
+
+      .venues__actions {
+        display: flex;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .venues__btn {
+        flex: 1;
+        text-align: center;
+        border: 1px solid var(--primary-white);
+        transition: all 0.3s ease;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .venues__btn--primary {
+        background: var(--primary-white);
+        color: var(--primary-black);
+      }
+
+      .venues__btn:hover {
+        background: var(--accent-red);
+        border-color: var(--accent-red);
+        color: var(--primary-white);
+      }
+
+      /* Sliding Banner */
+      .sliding-banner {
+        background: var(--accent-red);
+        padding: var(--spacing-sm) 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .sliding-banner-black {
+        padding: var(--spacing-sm) 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .sliding-banner__content {
+        display: flex;
+        animation: slide 30s linear infinite;
+        font-size: 1.2rem;
+        font-weight: bold;
+        gap: 200px;
+      }
+
+      .sliding-banner__content span {
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      /* Products Section */
+      .products {
+        /* padding: var(--spacing-xl) 0; */
+      }
+
+      .products__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: var(--spacing-xs);
+      }
+
+      .products__title {
+        font-size: 2.5rem;
+      }
+
+      .products__nav {
+        display: flex;
+        gap: var(--spacing-sm);
+      }
+
+      .products__arrow {
+        height: 50px;
+        color: var(--primary-white);
+        transition: all 0.3s ease;
+      }
+
+      .products__carousel {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .products__track {
+        display: flex;
+        transition: transform 0.3s ease;
+      }
+
+      .products__item {
+        flex: 0 0 22%;
+
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border-right: 1px solid white;
+      }
+
+      .products__divider {
+        height: 1px;
+        background-color: white;
+        /* margin-top: 14px; */
+      }
+
+      .products__item:hover {
+        transform: translateY(-5px);
+      }
+
+      .products__image {
+        padding: 14px;
+        aspect-ratio: 1;
+        position: relative;
+      }
+
+      .products__info {
+        padding: var(--spacing-sm);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .products__name {
+        font-weight: bold;
+      }
+
+      .products__price {
+        color: var(--primary-white);
+      }
+
+      .products__button {
+        padding: var(--spacing-xs);
+        background: var(--primary-white);
+        color: var(--primary-black);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        margin: var(--spacing-xs);
+        width: -webkit-fill-available;
+      }
+
+      .products__dots {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-xs);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .products__dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #666;
+        transition: background 0.3s ease;
+      }
+
+      .products__dot--active {
+        background: var(--primary-white);
+      }
+
+      /* Footer */
+      .footer {
+        /* padding: var(--spacing-xs) var(--spacing-sm); */
+        border-top: 1px solid #333;
+      }
+
+      .footer__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: var(--spacing-lg); */
+      }
+      .footer__section {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-right: 1px solid var(--primary-white);
+      }
+      .footer__section h3 {
+        margin-bottom: var(--spacing-xs);
+        font-size: 1.2rem;
+      }
+
+      .footer__links {
+        list-style: none;
+      }
+
+      .footer__links li {
+        /* margin-bottom: var(--spacing-xs); */
+      }
+
+      .footer__links a {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+
+      .footer__links a:hover {
+        opacity: 1;
+      }
+
+      .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-top: 1px solid #333;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      .footer__payment {
+        display: flex;
+        gap: var(--spacing-xs);
+      }
+
+      .footer__payment-icon {
+        width: 30px;
+        height: 20px;
+        background: var(--primary-white);
+        border-radius: 3px;
+      }
+
+      .footer__brand {
+        color: var(--primary-white);
+        font-size: 18vw;
+        text-align: center;
+        white-space: nowrap;
+        font-family: var(--font-brand);
+        line-height: 90%;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav__menu {
+          display: none;
+        }
+
+        .venues__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer__grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer__bottom {
+          flex-direction: column;
+          gap: var(--spacing-sm);
+        }
+
+        .products__item {
+          flex: 0 0 90%;
+          margin-right: 5%;
+        }
+
+        .press__logos {
+          gap: var(--spacing-lg);
+          height: fit-content;
+          padding-top: var(--spacing-sm);
+          padding-bottom: var(--spacing-sm);
+        }
+
+        .press__logo {
+          width: 15%;
+          height: 80px;
+          object-fit: contain;
+        }
+
+        .newsletter {
+          flex-direction: column;
+          align-items: start;
+        }
+        .newsletter__form {
+          width: 100%;
+        }
+      }
+
+      /* Loading States */
+      .lazy-loading {
+        background: #333;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CoffeeShop",
+        "name": "Revolver Coffee",
+        "description": "Premium coffee roastery in Bali established in 2012",
+        "url": "https://revolvercoffee.com",
+        "telephone": "+62-XXX-XXXX-XXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Seminyak",
+          "addressLocality": "Bali",
+          "addressCountry": "Indonesia"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-8.6905",
+          "longitude": "115.1729"
+        },
+        "openingHours": "Mo-Su 07:00-22:00",
+        "servesCuisine": "Coffee",
+        "priceRange": "$$",
+        "image": "https://revolvercoffee.com/images/revolver-hero.jpg"
+      }
+    </script>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav__logo" aria-label="Revolver Coffee Home"
+          >REVOLVER</a
+        >
+        <a href="#shop" class="nav__link">Shop +</a>
+        <a href="#about" class="nav__link">About Us</a>
+        <a href="#locations" class="nav__link">Location</a>
+        <a href="#menu" class="nav__link">Menu</a>
+        <a href="#events" class="nav__link">Events & Happening</a>
+        <a href="#cart" class="nav__link nav__cart">Cart (0)</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+      <!-- Hero Section -->
+      <section class="hero" role="banner">
+        <img
+          src="https://revolverbali.com/cdn/shop/files/web-landing_1728x.webp?v=1747734498"
+          class="hero__image"
+        />
+        <h1 class="hero__title">
+          Coffee is at the heart of who we are, what we do and what makes us
+          unique. It all started as a tiny cafe in seminyak in 2012, and grew
+          into multiple venues spanning Bali.
+        </h1>
+      </section>
+
+      <hr />
+
+      <!-- Products Section -->
+      <section class="products" id="shop">
+        <div class="products__header">
+          <h2 class="products__title">Shop</h2>
+          <div class="products__nav">
+            <button
+              class="products__arrow"
+              id="prevBtn"
+              aria-label="Previous products"
+            >
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M52.5 29.9675L8.0275 30M24.9675 12.5L7.5 30L24.97 47.5"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="products__arrow"
+              id="nextBtn"
+              aria-label="Next products"
+            >
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.5 30.0325L51.9725 30M35.0325 47.5L52.5 30L35.03 12.5"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <hr />
+        <div class="products__carousel">
+          <div class="products__track" id="productsTrack">
+            <!-- Products will be dynamically generated here -->
+          </div>
+        </div>
+        <!-- <div class="products__carousel">
+          <div class="products__track" id="productsTrack">
+            <article class="products__item">
+              <div class="products__image lazy-loading" data-src="product1.jpg">
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23333' width='200' height='200'/><rect fill='%23D2691E' x='40' y='40' width='120' height='120' rx='10'/></svg>"
+                  alt="House Blend Coffee 250gr"
+                  loading="lazy"
+                />
+              </div>
+              <div class="products__info">
+                <h3 class="products__name">House Blend - 250gr</h3>
+                <p class="products__price">IDR 130,000</p>
+                <button class="products__button">VIEW</button>
+              </div>
+            </article>
+            <article class="products__item">
+              <div class="products__image lazy-loading">
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23f5f5f5' width='200' height='200'/><circle cx='100' cy='100' r='60' fill='%23c41e3a'/></svg>"
+                  alt="Run Club T-Shirt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="products__info">
+                <h3 class="products__name">Run Club Tee</h3>
+                <p class="products__price">IDR 150,000</p>
+                <button class="products__button">VIEW</button>
+              </div>
+            </article>
+            <article class="products__item">
+              <div class="products__image lazy-loading">
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23333' width='200' height='200'/><rect fill='%23D2691E' x='40' y='40' width='120' height='120' rx='10'/></svg>"
+                  alt="House Blend Coffee 250gr"
+                  loading="lazy"
+                />
+              </div>
+              <div class="products__info">
+                <h3 class="products__name">House Blend - 250gr</h3>
+                <p class="products__price">IDR 130,000</p>
+                <button class="products__button">VIEW</button>
+              </div>
+            </article>
+            <article class="products__item">
+              <div class="products__image lazy-loading">
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23000' width='200' height='200'/><circle cx='100' cy='100' r='60' fill='%23fff'/></svg>"
+                  alt="Black T-Shirt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="products__info">
+                <h3 class="products__name">Black Tee</h3>
+                <p class="products__price">IDR 130,000</p>
+                <button class="products__button">VIEW</button>
+              </div>
+            </article>
+            <article class="products__item">
+              <div class="products__image lazy-loading">
+                <img
+                  src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23333' width='200' height='200'/><rect fill='%23D2691E' x='40' y='40' width='120' height='120' rx='10'/></svg>"
+                  alt="House Blend Coffee 250gr"
+                  loading="lazy"
+                />
+              </div>
+              <div class="products__info">
+                <h3 class="products__name">House Blend - 250gr</h3>
+                <p class="products__price">IDR 130,000</p>
+                <button class="products__button">VIEW</button>
+              </div>
+            </article>
+          </div>
+        </div> -->
+        <hr />
+        <div class="products__dots" id="productsDots">
+          <span class="products__dot products__dot--active"></span>
+          <span class="products__dot"></span>
+          <span class="products__dot"></span>
+        </div>
+      </section>
+      <hr />
+      <!-- Sliding Banner -->
+      <section class="sliding-banner" aria-label="Promotional banner">
+        <div class="sliding-banner__content">
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+          <span>Shop Revolver Goods Now!</span>
+        </div>
+      </section>
+      <hr />
+      <!-- Venues Section -->
+      <section class="venues" id="locations">
+        <h2 class="venues__title">Venues Location</h2>
+        <hr />
+        <div class="venues__grid">
+          <div class="venues__info">
+            <ul class="venues__list">
+              <li class="venues__item">Revolver Seminyak</li>
+              <li class="venues__item">Revolver Canggu</li>
+              <li class="venues__item">Baby Revs</li>
+              <li class="venues__item">Revolver Domestic</li>
+              <li class="venues__item">Revolver International</li>
+            </ul>
+          </div>
+
+          <div class="venues__image">
+            <img
+              src="https://revolverbali.com/cdn/shop/files/7c7ac2b3bfe0f6a5cfa576ad972b387c982db71e_720x.png?v=1747301141"
+              alt="Revolver Coffee Interior"
+              loading="lazy"
+              class="venues__img"
+            />
+            <div class="venues__actions">
+              <a href="#" class="venues__btn">GET DIRECTION</a>
+              <a href="#" class="venues__btn venues__btn--primary"
+                >BOOK A TABLE</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- Sliding Banner -->
+      <section class="sliding-banner-black" aria-label="Promotional banner">
+        <div class="sliding-banner__content">
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+          <span>Join Our Community – Exclusive Perks & Updates</span>
+        </div>
+      </section>
+      <hr />
+      <!-- Run Club Section -->
+      <section class="run-club" id="run-club">
+        <div class="run-club__container container">
+          <h2 class="run-club__title">
+            Join The Revolver Run Club Strava Group
+          </h2>
+          <a href="#" class="run-club__button" role="button"
+            >Join Our Community</a
+          >
+          <p class="run-club__offer">
+            10% OFF ALL REVOLVER FOOD AND BEVERAGE AFTER RUN FOR ALL MEMBERS
+          </p>
+        </div>
+      </section>
+      <hr />
+      <!-- Press Section -->
+      <section class="press" id="press">
+        <h2 class="press__title">As seen in</h2>
+        <hr />
+        <div class="press__logos">
+          <img
+            src="https://revolverbali.com/cdn/shop/files/4720d8fda817e32b2db6480fbcc1e0358063d15e_360x.png?v=1747629967"
+            alt="Rolling Stone"
+            class="press__logo"
+            loading="lazy"
+          />
+          <img
+            src="https://revolverbali.com/cdn/shop/files/5b93d6fcaabac6e6f8654249f76e7d67200e0a96_360x.png?v=1747629967"
+            alt="Food & Beverage Magazine"
+            class="press__logo"
+            loading="lazy"
+          />
+          <img
+            src="https://revolverbali.com/cdn/shop/files/b276cb2dd6e8575c295df37ff9cfc3e4a2d69c13_360x.png?v=1747629967"
+            alt="TIME Magazine"
+            class="press__logo"
+            loading="lazy"
+          />
+          <img
+            src="https://revolverbali.com/cdn/shop/files/27a60b1867872f91c4e0b412e5352bb8d79c0b03_360x.png?v=1747629967"
+            alt="Hypebeast"
+            class="press__logo"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Newsletter Section -->
+      <section class="newsletter" id="newsletter">
+        <p id="newsletter-desc" class="">
+          Subscribe to get special offers, free giveaways, and
+          once-in-a-lifetime deals.
+        </p>
+        <form
+          class="newsletter__form"
+          role="form"
+          aria-label="Newsletter subscription"
+        >
+          <label for="email" class="visually-hidden">Email address</label>
+          <input
+            type="email"
+            id="email"
+            class="newsletter__input"
+            placeholder="Email address"
+            required
+            aria-describedby="newsletter-desc"
+          />
+          <button type="submit" class="newsletter__button">Subscribe</button>
+        </form>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <h2 class="about__title">About Revolver Bali</h2>
+        <div class="about__content">
+          <p>
+            Coffee is at the heart of who we are, what we do and what makes us
+            unique. It all started as a tiny cafe in Seminyak in 2012, and grew
+            into multiple venues spanning Bali. With a thriving coffee roastery
+            using some of the world's best Arabica beans we are proud to be
+            industry coffee leaders on the beautiful island of Bali and now all
+            the way to your kitchen counter. We hope you enjoy this cup of Joe
+            just as much as we did creating it for you.
+          </p>
+          <p class="about__signature">With love,<br />The Revs Team</p>
+        </div>
+      </section>
+      <hr />
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__grid">
+        <div class="footer__section">
+          <h3>Shop</h3>
+          <ul class="footer__links">
+            <li><a href="#">Shop all</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">On Sale</a></li>
+            <li><a href="#">Brands</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3>Information</h3>
+          <ul class="footer__links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3>Find Us</h3>
+          <ul class="footer__links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          <p>&copy; 2025, Revolver</p>
+          <p>Powered by Shopify</p>
+        </div>
+        <div class="footer__payment">
+          <div class="footer__payment-icon" aria-label="Visa"></div>
+          <div class="footer__payment-icon" aria-label="Mastercard"></div>
+          <div class="footer__payment-icon" aria-label="American Express"></div>
+          <div class="footer__payment-icon" aria-label="PayPal"></div>
+          <div class="footer__payment-icon" aria-label="Apple Pay"></div>
+          <div class="footer__payment-icon" aria-label="Google Pay"></div>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <p class="footer__brand">REVOLVER</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Product data array
+      const productsData = [
+        {
+          id: 1,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 2,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 3,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 4,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 5,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 6,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 7,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 8,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+        {
+          id: 9,
+          name: "House Blend - 250gr",
+          price: "IDR 130,000",
+          image:
+            "https://revolverbali.com/cdn/shop/files/Coffee_Beans_House_Blend_250gr_600x600_crop_center.jpg?v=1744957881",
+          alt: "House Blend Coffee 250gr",
+        },
+      ];
+      // Render products function
+      function renderProducts() {
+        const track = document.getElementById("productsTrack");
+        const productsHTML = productsData
+          .map(
+            (product) => `
+                <article class="products__item">
+                    <div class="products__image-container">
+                        <img src="${product.image}" alt="${product.alt}" class="products__image" loading="lazy">
+                    </div>
+                    <div class="products__divider"></div>
+                    <div class="products__info">
+                        <h3 class="products__name">${product.name}</h3>
+                        <p class="products__price">${product.price}</p>
+                    </div>
+                    <button class="products__button">VIEW</button>
+                </article>
+            `
+          )
+          .join("");
+
+        track.innerHTML = productsHTML;
+      }
+
+      // Carousel functionality
+      class ProductCarousel {
+        constructor() {
+          this.track = document.getElementById("productsTrack");
+          this.prevBtn = document.getElementById("prevBtn");
+          this.nextBtn = document.getElementById("nextBtn");
+          this.dots = document.getElementById("productsDots");
+          this.items = this.track.querySelectorAll(".products__item");
+          this.currentIndex = 0;
+          this.itemsToShow = 4.5; // Show 4 full items + 0.5 cut item
+          this.itemWidth = 100 / this.itemsToShow; // Percentage width per item
+
+          this.init();
+        }
+
+        init() {
+          this.setupEventListeners();
+          this.updateCarousel();
+          this.updateDots();
+        }
+
+        setupEventListeners() {
+          this.prevBtn.addEventListener("click", () => this.prev());
+          this.nextBtn.addEventListener("click", () => this.next());
+
+          // Touch/swipe support
+          let startX = 0;
+          let currentX = 0;
+          let isDragging = false;
+
+          this.track.addEventListener(
+            "touchstart",
+            (e) => {
+              startX = e.touches[0].clientX;
+              isDragging = true;
+            },
+            { passive: true }
+          );
+
+          this.track.addEventListener(
+            "touchmove",
+            (e) => {
+              if (!isDragging) return;
+              currentX = e.touches[0].clientX;
+            },
+            { passive: true }
+          );
+
+          this.track.addEventListener(
+            "touchend",
+            () => {
+              if (!isDragging) return;
+              const diff = startX - currentX;
+              if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                  this.next();
+                } else {
+                  this.prev();
+                }
+              }
+              isDragging = false;
+            },
+            { passive: true }
+          );
+
+          // Keyboard navigation
+          document.addEventListener("keydown", (e) => {
+            if (e.target.closest(".products__carousel")) {
+              if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                this.prev();
+              } else if (e.key === "ArrowRight") {
+                e.preventDefault();
+                this.next();
+              }
+            }
+          });
+        }
+
+        next() {
+          const maxIndex = this.items.length - Math.floor(this.itemsToShow);
+          if (this.currentIndex < maxIndex) {
+            this.currentIndex++;
+            this.updateCarousel();
+            this.updateDots();
+          }
+        }
+
+        prev() {
+          if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateCarousel();
+            this.updateDots();
+          }
+        }
+
+        updateCarousel() {
+          const translateX = -(this.currentIndex * this.itemWidth);
+          this.track.style.transform = `translateX(${translateX}%)`;
+
+          // Update button states
+          this.prevBtn.disabled = this.currentIndex === 0;
+          this.nextBtn.disabled =
+            this.currentIndex >=
+            this.items.length - Math.floor(this.itemsToShow);
+
+          // Add aria-live for screen readers
+          this.track.setAttribute("aria-live", "polite");
+        }
+
+        updateDots() {
+          const dots = this.dots.querySelectorAll(".products__dot");
+          dots.forEach((dot, index) => {
+            dot.classList.toggle(
+              "products__dot--active",
+              index === Math.floor(this.currentIndex / 2)
+            );
+          });
+        }
+      }
+
+      // Lazy loading implementation
+      class LazyLoader {
+        constructor() {
+          this.images = document.querySelectorAll('img[loading="lazy"]');
+          this.imageObserver = null;
+          this.init();
+        }
+
+        init() {
+          if ("IntersectionObserver" in window) {
+            this.imageObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    const img = entry.target;
+                    this.loadImage(img);
+                    this.imageObserver.unobserve(img);
+                  }
+                });
+              },
+              {
+                rootMargin: "50px 0px",
+                threshold: 0.01,
+              }
+            );
+
+            this.images.forEach((img) => this.imageObserver.observe(img));
+          } else {
+            // Fallback for browsers without IntersectionObserver
+            this.images.forEach((img) => this.loadImage(img));
+          }
+        }
+
+        loadImage(img) {
+          const parent = img.closest(".lazy-loading");
+          if (parent) {
+            parent.classList.remove("lazy-loading");
+          }
+
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+          }
+        }
+      }
+
+      // Newsletter form handling
+      class Newsletter {
+        constructor() {
+          this.form = document.querySelector(".newsletter__form");
+          this.init();
+        }
+
+        init() {
+          if (this.form) {
+            this.form.addEventListener("submit", this.handleSubmit.bind(this));
+          }
+        }
+
+        handleSubmit(e) {
+          e.preventDefault();
+          const email = this.form.querySelector('input[type="email"]').value;
+
+          if (this.validateEmail(email)) {
+            // Simulate API call
+            this.showSuccess();
+          } else {
+            this.showError("Please enter a valid email address");
+          }
+        }
+
+        validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+        }
+
+        showSuccess() {
+          const button = this.form.querySelector("button");
+          const originalText = button.textContent;
+          button.textContent = "Subscribed!";
+          button.style.background = "#28a745";
+
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = "";
+            this.form.querySelector("input").value = "";
+          }, 2000);
+        }
+
+        showError(message) {
+          const input = this.form.querySelector("input");
+          input.style.borderColor = "#dc3545";
+
+          setTimeout(() => {
+            input.style.borderColor = "";
+          }, 3000);
+        }
+      }
+
+      // Smooth scrolling for navigation links
+      class SmoothScroll {
+        constructor() {
+          this.links = document.querySelectorAll('a[href^="#"]');
+          this.init();
+        }
+
+        init() {
+          this.links.forEach((link) => {
+            link.addEventListener("click", this.handleClick.bind(this));
+          });
+        }
+
+        handleClick(e) {
+          const href = e.currentTarget.getAttribute("href");
+          if (href === "#") return;
+
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const headerHeight = document.querySelector(".header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight - 20;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        }
+      }
+
+      // Performance monitoring
+      class PerformanceMonitor {
+        constructor() {
+          this.init();
+        }
+
+        init() {
+          if ("performance" in window) {
+            window.addEventListener("load", () => {
+              // Monitor Core Web Vitals
+              this.measureLCP();
+              this.measureFID();
+              this.measureCLS();
+            });
+          }
+        }
+
+        measureLCP() {
+          if ("PerformanceObserver" in window) {
+            const observer = new PerformanceObserver((list) => {
+              const entries = list.getEntries();
+              const lastEntry = entries[entries.length - 1];
+              console.log("LCP:", lastEntry.startTime);
+            });
+            observer.observe({ entryTypes: ["largest-contentful-paint"] });
+          }
+        }
+
+        measureFID() {
+          if ("PerformanceObserver" in window) {
+            const observer = new PerformanceObserver((list) => {
+              const entries = list.getEntries();
+              entries.forEach((entry) => {
+                console.log("FID:", entry.processingStart - entry.startTime);
+              });
+            });
+            observer.observe({ entryTypes: ["first-input"] });
+          }
+        }
+
+        measureCLS() {
+          if ("PerformanceObserver" in window) {
+            let clsValue = 0;
+            const observer = new PerformanceObserver((list) => {
+              const entries = list.getEntries();
+              entries.forEach((entry) => {
+                if (!entry.hadRecentInput) {
+                  clsValue += entry.value;
+                }
+              });
+              console.log("CLS:", clsValue);
+            });
+            observer.observe({ entryTypes: ["layout-shift"] });
+          }
+        }
+      }
+
+      // Initialize all components when DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProducts();
+        new ProductCarousel();
+        new LazyLoader();
+        new Newsletter();
+        new SmoothScroll();
+        new PerformanceMonitor();
+
+        // Add loading states
+        document.body.classList.add("loaded");
+
+        // Service worker registration for PWA capabilities
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/sw.js").catch((err) => {
+            console.log("Service worker registration failed:", err);
+          });
+        }
+      });
+
+      // Handle page visibility for performance optimization
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          // Pause animations when page is not visible
+          document.documentElement.style.setProperty(
+            "--animation-play-state",
+            "paused"
+          );
+        } else {
+          // Resume animations when page becomes visible
+          document.documentElement.style.setProperty(
+            "--animation-play-state",
+            "running"
+          );
+        }
+      });
+
+      // Error handling for images
+      document.addEventListener(
+        "error",
+        (e) => {
+          if (e.target.tagName === "IMG") {
+            e.target.style.display = "none";
+            console.warn("Image failed to load:", e.target.src);
+          }
+        },
+        true
+      );
+
+      // Preload critical resources
+      const preloadLinks = [
+        { href: "/images/hero-bg.webp", as: "image" },
+        {
+          href: "/fonts/primary-font.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+      ];
+
+      preloadLinks.forEach((link) => {
+        const linkEl = document.createElement("link");
+        linkEl.rel = "preload";
+        Object.keys(link).forEach((key) => {
+          linkEl[key] = link[key];
+        });
+        document.head.appendChild(linkEl);
+      });
+    </script>
+
+    <!-- Analytics and tracking (placeholder) -->
+    <script>
+      // Google Analytics 4 placeholder
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+
+      // Track custom events for SEO insights
+      function trackEvent(eventName, parameters = {}) {
+        if (typeof gtag !== "undefined") {
+          gtag("event", eventName, parameters);
+        }
+      }
+
+      // Track scroll depth
+      let scrollDepth = 0;
+      window.addEventListener("scroll", () => {
+        const currentScroll =
+          ((window.scrollY + window.innerHeight) /
+            document.documentElement.scrollHeight) *
+          100;
+        if (currentScroll > scrollDepth) {
+          scrollDepth = Math.floor(currentScroll / 25) * 25;
+          if (scrollDepth <= 100) {
+            trackEvent("scroll_depth", { depth: scrollDepth });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
